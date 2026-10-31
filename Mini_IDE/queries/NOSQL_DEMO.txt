@@ -1,0 +1,8 @@
+# Ejecutar cada línea por separado. Backend: NoSQL dbm clave-valor, NO MongoDB.
+db.createCollection("proyectos")
+db.proyectos.insertOne({"codigo":"P-01","titulo":"Mini IDE","activo":true})
+db.proyectos.find({})
+db.proyectos.updateOne({"codigo":"P-01"},{"$set":{"activo":false}})
+db.proyectos.find({"activo":false})
+db.proyectos.deleteOne({"codigo":"P-01"})
+db.proyectos.find({})
